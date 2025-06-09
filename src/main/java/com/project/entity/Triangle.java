@@ -1,16 +1,15 @@
-package com.project.Entities;
+package com.project.entity;
 
 import java.util.Objects;
 
-public class Triangle {
-    private int id;
+public class Triangle implements GeometricEntity{
+    private long id;
     private String name;
-    private Point pointOne;
-    private Point pointTwo;
-    private Point pointThree;
+    private final Point pointOne;
+    private final Point pointTwo;
+    private final Point pointThree;
 
-    public Triangle(int id, String name, Point pointOne, Point pointTwo, Point pointThree) {
-        this.id=id;
+    public Triangle(String name, Point pointOne, Point pointTwo, Point pointThree) {
         this.name=name;
         this.pointOne=pointOne;
         this.pointTwo=pointTwo;
@@ -35,6 +34,21 @@ public class Triangle {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, pointOne, pointTwo, pointThree);
+    }
+
+    @Override
+    public long getId() {
+        return this.id;
+    }
+
+    @Override
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    @Override
+    public String getName() {
+        return this.name;
     }
 
     @Override

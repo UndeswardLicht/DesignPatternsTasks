@@ -1,6 +1,6 @@
-package com.project.Actions;
+package com.project.action;
 
-import com.project.Entities.Triangle;
+import com.project.entity.Triangle;
 
 public class Action {
 
